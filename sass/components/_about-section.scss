@@ -1,0 +1,45 @@
+.section-about {
+  padding-top: 0;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    gap: var(--indent);
+  }
+}
+
+.about-list {
+}
+
+.about-item {
+  --items: 3;
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    background-color: #2f303acc;
+    padding: 27px 0px;
+    width: 100%;
+    position: absolute;
+
+    transform: translateY(0px);
+    transition: transform var(--transition);
+  }
+
+  &__wrapper:hover &__overlay {
+    transform: translateY(-70px);
+  }
+
+  &__overlay &__title {
+    width: 205px;
+    color: var(--white);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
