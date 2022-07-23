@@ -1,5 +1,5 @@
 .section-about {
-  padding-top: 0;
+  @include section(0);
 
   &__title {
     margin-bottom: 50px;
@@ -11,12 +11,10 @@
 }
 
 .about-list {
+  --items: 3;
 }
 
 .about-item {
-  --items: 3;
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-
   &__wrapper {
     position: relative;
     overflow: hidden;

@@ -1,4 +1,6 @@
-.benefits-section {
+.section-benefits {
+  // @extend %section;
+  @include section();
 }
 
 .benefits-section__list {
@@ -6,10 +8,10 @@
 
 .feature-list {
   gap: var(--indent);
+  --items: 4;
 }
 
 .feature-list__item {
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 .feature__thumbnail {
@@ -24,10 +26,13 @@
 }
 
 .feature__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
+  // font-weight: 700;
+  // font-size: 14px;
+  // line-height: 1.17;
+  // letter-spacing: 0.03em;
+
+  @include fonts(14px, 16px);
+
   text-transform: uppercase;
   color: var(--title-text-color);
   margin-bottom: 10px;

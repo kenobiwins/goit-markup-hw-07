@@ -1,6 +1,9 @@
-.section-portfolio__sample {
-  margin-bottom: 50px;
-  gap: 8px;
+.section-portfolio {
+  @include section();
+  .section-portfolio__sample {
+    margin-bottom: 50px;
+    gap: 8px;
+  }
 }
 .filter {
   display: flex;
